@@ -4,12 +4,20 @@ function Header() {
   const date = new Date();
   const hours = date.getHours();
 
-  let welcomeMsg =
-    hours < 12
-      ? "Good Morning!"
-      : hours >= 12 && hours < 17
-      ? "Good Afternoon!"
-      : "Good Night!";
+  let welcomeMsg;
+  const styles = {
+    fontSize: 16,
+  };
+  if (hours < 12) {
+    welcomeMsg = "Good Morning!";
+    styles.color = "#04756F";
+  } else if (hours >= 12 && hours < 17) {
+    welcomeMsg = "Good Afternoon!";
+    styles.color = "#8914A3";
+  } else {
+    welcomeMsg = "Good Night!";
+    styles.color = "#D90000";
+  }
 
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
@@ -69,7 +77,9 @@ function Header() {
             </div>
           </li>
         </ul>
-        <span className="welcome-message">{welcomeMsg}</span>
+        <span style={styles} className="welcome-message">
+          {welcomeMsg}
+        </span>
       </div>
     </nav>
   );
