@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import React, { Component } from "react";
 
-function ToDoItem() {
+function ToDoItem(props) {
   return (
     <li>
       <input
@@ -12,7 +12,7 @@ function ToDoItem() {
         value="newsletter"
       />
       <label for="thing2" className="form-check-label">
-        second thing
+        {props.label}
       </label>
     </li>
   );

@@ -6,10 +6,10 @@ function MainContent() {
     <main role="main" className="container">
       <div>
         <ul className="todo-list">
-          <ToDoItem />
-          <ToDoItem />
-          <ToDoItem />
-          <ToDoItem />
+          <ToDoItem label="first thing" />
+          <ToDoItem label="second thing" />
+          <ToDoItem label="third thing" />
+          <ToDoItem label="fourth thing" />
         </ul>
       </div>
     </main>
