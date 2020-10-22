@@ -4,14 +4,7 @@ import dummyData from "../dummyData";
 
 function MainContent() {
   const listComponents = dummyData.map((data) => {
-    return (
-      <ToDoItem
-        key={data.id}
-        label={data.label}
-        name={data.name}
-        value={data.value}
-      />
-    );
+    return <ToDoItem key={data.id} item={data} />;
   });
 
   return (
