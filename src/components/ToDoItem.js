@@ -7,11 +7,11 @@ function ToDoItem(props) {
       <input
         className="form-check-input"
         type="checkbox"
-        id="thing2"
-        name="subscribe"
-        value="newsletter"
+        id={props.key}
+        name={props.name}
+        value={props.value}
       />
-      <label for="thing2" className="form-check-label">
+      <label for={props.name} className="form-check-label">
         {props.label}
       </label>
     </li>
