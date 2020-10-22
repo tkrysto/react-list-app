@@ -3,7 +3,7 @@ import React, { Component } from "react";
 
 function ToDoItem(props) {
   return (
-    <li>
+    <li style={{ display: props.label ? "block" : "none" }}>
       <input
         className="form-check-input"
         type="checkbox"
