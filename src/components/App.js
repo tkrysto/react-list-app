@@ -7,6 +7,7 @@ import MainContent from "./MainContent";
 import Footer from "./Footer";
 
 class App extends React.Component {
+  state = {};
   render() {
     return (
       <div className="App">
