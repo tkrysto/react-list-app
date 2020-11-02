@@ -2,14 +2,13 @@ import React from "react";
 import ToDoItem from "./ToDoItem";
 import dummyData from "../dummyData";
 
+class MainContent extends React.Component {
+  state = {
+    dd: dummyData,
+  };
 
-class MainContent extends Rails.Component {
-  state = { 
-    dummyData = dummyData
-   }
-  
-  render() { 
-    const listComponents = this.state.dummydata.map((data) => {
+  render() {
+    const listComponents = this.state.dd.map((data) => {
       return <ToDoItem key={data.id} item={data} />;
     });
     return (
@@ -21,5 +20,5 @@ class MainContent extends Rails.Component {
     );
   }
 }
- 
+
 export default MainContent;
