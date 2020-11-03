@@ -7,10 +7,11 @@ function ToDoItem(props) {
       <input
         className="form-check-input"
         type="checkbox"
-        id={props.key}
+        id={props.item.id}
         name={props.item.name}
         value={props.item.value}
         checked={props.item.completed}
+        onClick={() => props.handleChange(props.item.id)}
       />
       <label for={props.item.name} className="form-check-label">
         {props.item.label}
